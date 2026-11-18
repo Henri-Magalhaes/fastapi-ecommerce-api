@@ -1,0 +1,26 @@
+[project]
+name = "fastapi-ecommerce-api"
+version = "0.1.0"
+description = "API REST de e-commerce com FastAPI, SQLAlchemy e PostgreSQL"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "alembic>=1.20.1",
+    "argon2-cffi>=25.1.0",
+    "fastapi[standard]>=0.162.0",
+    "psycopg[binary]>=3.2",
+    "pydantic-settings>=2.16.2",
+    "pyjwt>=2.15.1",
+    "sqlalchemy>=2.1.6",
+    "uvicorn>=0.54.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
